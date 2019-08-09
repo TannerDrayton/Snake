@@ -2,7 +2,7 @@ import pygame
 from game_settings import Game_settings
 
 
-class Game_Object():
+class Game_Objects():
 
     def __init__(self, xcor, ycor, color):
         self.xcor = xcor
