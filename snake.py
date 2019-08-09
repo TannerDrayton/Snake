@@ -19,7 +19,6 @@ title_press_start_font = pygame.font.SysFont('Comic Sans', int(gs.GAME_SIZE * 0.
 title_copyright_font = pygame.font.SysFont('Comic Sans', int(gs.GAME_SIZE * 0.05), True)
 pygame.display.set_caption(' SNAKE ')
 
-
 def handle_events():
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -36,7 +35,6 @@ def handle_events():
             elif event.key == pygame.K_p:
                 pause_game()
 
-
 def pause_game():
     game_is_paused = True
     while game_is_paused:
@@ -49,7 +47,6 @@ def pause_game():
 
             pygame.display.update()
             clock.tick(5)
-
 
 color_cycler = Color_Cycler(gs.BLUE, gs.LIME_GREEN,gs.FOREST_GREEN, gs.YELLOW, gs.CYAN)
 snake = Snake(gs.BLOCK_SIZE * 5, gs.BLOCK_SIZE * 5,gs.LIME_GREEN, gs.BLOCK_SIZE, gs.BLUE)
