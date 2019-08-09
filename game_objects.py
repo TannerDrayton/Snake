@@ -10,8 +10,8 @@ class Game_Objects():
         self.color = color
 
     def show_as_circle(self, game_display, BLOCK_SIZE):
-        pygame.draw.circle(game_display, self.color, (int(
-            self.xcor + BLOCK_SIZE / 2), int(self.ycor + BLOCK_SIZE / 2)), int(BLOCK_SIZE / 2))
+        pygame.draw.circle(game_display, self.color, (int(self.xcor + BLOCK_SIZE / 2),
+            int(self.ycor + BLOCK_SIZE / 2)), int(BLOCK_SIZE / 2))
 
     def show_as_square(self, game_display, GAP_SIZE, BLOCK_SIZE):
         pygame.draw.rect(game_display, self.color, pygame.Rect(

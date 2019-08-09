@@ -1,4 +1,4 @@
-from game_objects import Game_Object
+from game_objects import Game_Objects
 from game_settings import Game_settings
 
 
@@ -8,9 +8,9 @@ class Snake():
         self.is_alive = True
         self.score = 0
         self.direction = "RIGHT"
-        self.body = [Game_Object(xcor, ycor, LIME_GREEN),
-                     Game_Object(xcor - BLOCK_SIZE, ycor, BLUE),
-                     Game_Object(xcor - BLOCK_SIZE * 2, ycor, LIME_GREEN)]
+        self.body = [Game_Objects(xcor, ycor, LIME_GREEN),
+                     Game_Objects(xcor - BLOCK_SIZE, ycor, BLUE),
+                     Game_Objects(xcor - BLOCK_SIZE * 2, ycor, LIME_GREEN)]
 
         self.previous_last_tail = self.body[len(self.body) - 1]
         self.color_counter = 0
@@ -54,8 +54,7 @@ class Snake():
         elif self.direction == "DOWN":
             head_ycor = head_ycor + BLOCK_SIZE
 
-        self.body.insert(0, Game_Object(
-            head_xcor, head_ycor, color_cycler.get_next_color()))
+        self.body.insert(0, Game_Objects(head_xcor, head_ycor, color_cycler.get_next_color()))
 
         self.previous_last_tail = self.body.pop()
 
